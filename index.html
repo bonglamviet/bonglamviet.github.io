@@ -1,103 +1,547 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <title>Bootstrap Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/laptop.css">
+  <link rel="stylesheet" href="./css/tablet.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <title>Thiết kế và triển khai một website hoàn chỉnh</title>
 
-    <link rel="stylesheet" href="./styles.css">
-
-    
 </head>
+
 <body>
-    <header id="top">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-end">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">Carousel</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-flex align-items-center" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a href="#" aria-current class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" tabindex="-1" aria-disabled="true" class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex me-0 mb-2 mb-md-0">
-                        <input type="search" placeholder="Search" aria-label="Search" class="form-control me-2">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+  <header>
+    <div class="banner container">
+      <h1>Lâm Viết Bông</h1>
+      <p>Fullstack Developer</p>
+    </div>
+  </header>
+  <!--Menu-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light p-0">
+    <div class="navbar align-items-center justify-content-center p-0" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item d-flex align-items-center px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#15aabf" class="nav-menu">
+            <path fill-rule="evenodd"
+              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+              clip-rule="evenodd" />
+          </svg>
+          <a class="nav-link" href="#thongtin">THÔNG TIN</a>
+        </li>
+        <li class="nav-item d-flex align-items-center px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#15aabf" class="nav-menu">
+            <path fill-rule="evenodd"
+              d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z"
+              clip-rule="evenodd" />
+            <path
+              d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+          </svg>
+
+          <a class="nav-link" href="#lylich">LÝ LỊCH</a>
+        </li>
+        <li class="nav-item d-flex align-items-center px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#15aabf" class="nav-menu">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+
+          <a class="nav-link" href="#chungchi">CHỨNG CHỈ</a>
+        </li>
+        <li class="nav-item d-flex align-items-center px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#15aabf" class="nav-menu">
+            <path fill-rule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+              clip-rule="evenodd" />
+          </svg>
+
+          <a class="nav-link" href="#duan">DỰ ÁN</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!--Noi dung-->
+  <main>
+    <!--Thong tin-->
+    <section>
+      <div class="container-fliud thongtincanhan d-flex">
+        <div class="row">
+        <div class="thongtin thongtin1 p-5 col-sm">
+          <h3>Mục tiêu nghề nghiệp</h3>
+          <p>Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh nghiệp của FUNix. Tôi mong muốn mình sẽ đưuợc
+            làm việc với vị trí Fullstack Develop, có thể vận dụng những kiến thức đã được trau dồi và không ngừng học
+            hỏi để phát triển bản thân, cũng như hoàn thành tốt nhất công việc được giao.</p>
+
+        </div>
+        <div class="thongtin thongtin2 p-5 col-sm">
+          <div class="thongtin2-canhan">
+            <h3>Thông tin cá nhân</h3>
+            <p>Giới tính: Nam</p>
+            <p>Ngày sinh: 06/07/1988</p>
+            <p>Điện thoại: 079.895.1070</p>
+            <p>Email: bonglamviet@gmail.com</p>
+            <p>Địa chỉ: Khối phố quảng hậu, P. Điện Nam Trung, Điện Bàn, Quảng Nam</p>
+            <p>Website: http://abc.tech</p>
+          </div>
+          <div class="thongtin2-icon">
+            <!-- Facebook -->
+            <i class="fab fa-facebook-f fa-1x px-2" style="color: #3b5998;"></i>
+
+            <!-- Twitter -->
+            <i class="fab fa-twitter fa-1x  px-2" style="color: #55acee;"></i>
+
+            <!-- Google -->
+            <i class="fab fa-google fa-1x  px-2" style="color: #dd4b39;"></i>
+
+            <!-- Linkedin -->
+            <i class="fab fa-linkedin-in fa-1x px-2" style="color: #0082ca;"></i>
+          </div>
+        </div>
+       </div>
+      </div>
+
+    </section>
+
+    <!--Ly Lich-->
+    <section>
+      <div class="container khoancach-cacnoidung">
+        <div class="row">
+          <div class="col-sm">
+            <div class="p-3 lylich-khoancachdong">
+              <!--Kinh nghiem-->
+              <div class="lylich kinhnghiem">
+                <div class="tieude">
+                  <i class="ic-toolbox"></i>  
                 </div>
+                <div class="noidung ">
+                  <h3>Kinh Nghiệm</h3>
+                  <ul>
+                    <li>Full Stack Developer -Công ty Y</li>
+                    <p style="font-style: italic;">05-2023 - <span
+                        style="padding: auto 10px auto 10px; color: white; border-radius: 10%; background-color: #22b8cf"> Hiện
+                        tại </span> </p>
+                    <p>- Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu đã có.</p>
+                    <p>- Phân tích và thiết kế Database , sử dụng các hệ quản trị CSDL (MySQL, SQL server, no SQL,...) và viết
+                      được các truy vấn.</p>
+                    <p>- Sử dụng ngôn ngữ server-side (Python, Java...) để xây dựng các Web Service.</p>
+                    <li>Web Designer - Công ty X</li>
+                    <p style="font-style: italic;">06/2021 - 04/2022</p>
+                    <p>- Thiết kế Website dự trên yêu cầu từ khách hàng.</p>
+                    <p>- Sử dụng các công cụ: Figma, Canva, PTS</p>
+                  </ul>
+                </div> 
+  
+              </div>
+              <!--ky nang-->
+              <div class="lylich kynang">
+                <div class="tieude">
+                  <i class="	ic-tools-2"></i>
+  
+                </div>
+                <h3>Kỹ năng</h3>
+                <div class="kynang-noidung">
+                  <p>HTML/CSS: Fundamental</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img2"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+  
+                  <p>Javascript: Intermediate</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img2"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+  
+                  <p>Node JS: Intermediate</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img2"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img2"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+  
+  
+                  <p>Bootstrap 5: Fundamental</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                  </svg>
+                </div>
+  
+              </div>
+              <!--ngon ngu-->
+              <div class="lylich ngonngu">
+                <div class="tieude">
+                  <i class="ic-mic"></i>
+        
+                </div>
+                <h3>Ngôn ngữ</h3>
+                <p>Tiếng anh - IELTS 7.0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+                <p>Tiếng Nhật - JLPT N4</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#15aabf" class="dash-img2"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                </svg>
+        
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="p-3 lylich-khoancachdong">
+              <!--Ly lich-->
+              <div class="lylich hoatdong noidung d-grid">
+                <div class="tieude">
+                  <i class="ic-toolbox"></i>
+    
+                </div>
+                <h3>Hoạt động</h3>
+                <ul>
+                  <li>FPT Edu Hackathon 2019</li>
+                  <p style="font-style: italic;">03/2019 - 05/2019</p>
+                  <p>- Giải 3 bảng A</p>
+                  <p>- Đề tài : Trang web về phân loại rác thải.</p>
+    
+                </ul>
+                <ul>
+                  <li>Câu lạc bộ Z</li>
+                  <p style="font-style: italic;">08/2016 - 08/2017</p>
+                  <p>- Trưởng ban chuyên môn</p>
+    
+                </ul>
+              </div> 
+              <!--Hoc van-->
+              <div class="lylich hocvan noidung">
+                <div class="tieude">
+                  <i class="ic-pencil"></i>
+        
+                </div>
+                <h3>Học vấn</h3>
+                <ul>
+                  <li>FUNiX</li>
+                  <p style="font-style: italic;">06/2021 - 05/2021</p>
+                  <p>- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Full stack</p>
+                  <p>- GPA: 9/10</p>
+    
+                </ul>
+                <ul>
+                  <li>Cử nhân - ĐH FPT </li>
+                    <p style="font-style: italic;">08/2016 -07/2019</p>
+                    <p>- Chuyên ngành : Kỹ thuật phần mềm</p>
+                    <p>- GPa: 3.2/4</p>
+    
+                </ul>
+    
+              </div>
+              <!--So thich-->
+              <div class="lylich sothich">
+                <div class="tieude">
+                  <i class="ic-telescope"></i>
+    
+                </div>
+                <h3>Sở thích</h3>
+                <div class="sothich-icon">
+                  <div class="sothich-noidung">
+                    <i class="ic-megaphone"></i>
+                    <p>Âm nhạc</p>
+                  </div>
+    
+                  <div class="sothich-noidung">
+                    <i class="ic-strategy"></i>
+                    <p>Chơi game</p>
+                  </div>
+    
+                  <div class="sothich-noidung">
+                    <i class="ic-hotairballoon"></i>
+                    <p>Du lịch</p>
+                  </div>
+    
+                  <div class="sothich-noidung">
+                    <i class="ic-basket"></i>
+                    <p>Nấu ăn</p>
+                  </div>
+                </div>
+    
+              </div>
+
 
             </div>
-        </nav>
-    </header>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active bg-img1">
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Example headline</h1>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <p><a href="#" class="btn btn-lg btn-primary">Sign up today</a></p>
-                    </div>
-                </div>                           
-            </div>
+      </div>
+    </section>
 
-            <div class="carousel-item bg-img2">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline</h1>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <p><a href="#" class="btn btn-lg btn-primary">Learn more</a></p>
-                    </div>
-                </div>                           
-            </div>
+    <!--Chung chi-->
+    <section class="chungchi container-fliud khoancach-cacnoidung">    
+            
+      <div class="chungchi-noidung">
+        <h3>Chứng chỉ - Giải thưởng</h3>
 
-            <div class="carousel-item bg-img3">
-                <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>One more for good measure</h1>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <p><a href="#" class="btn btn-lg btn-primary">Browse galley</a></p>
-                    </div>
-                </div>                           
+        <div class="row">
+          <div class="col-sm gx-0">
+            <div class="chungchi-noidung1">
+              <img class="img-chungchi" src="img/Cert_DBI.png" alt="chứng chỉ 1">
+  
+              <h6>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h5>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA : 8.6</p>
+                
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  
+            <div class="chungchi-noidung1">
+              <img class="img-chungchi" src="img/Cert_DBI.png" alt="chứng chỉ 1">
+  
+              <h6>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h5>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA : 8.6</p>
+                
+            </div>
+  
+          </div>
+          <div class="col-sm gx-0">
+            <div class="chungchi-noidung1">
+              <img class="img-chungchi" src="img/Cert_DBI.png" alt="chứng chỉ 1">
+  
+              <h6>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h5>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA : 8.6</p>
+                
+            </div>
+          </div>
+        </div> 
+
       </div>
 
-      <!--Container-->
-      <div style="height: 200px">
 
+    </section>
 
+    <!--Du an-->
+    <section class="duan container khoancach-cacnoidung">
+      <h3>Dự án</h3>
+      <div class="row">
+        <div class="col-sm pb-3">
+          <table class="duan-border">
+            <tr class="duan-border">
+              <th colspan="2" class="duan-image">
+                <img class="duan-image" src="./img/project_1.png" alt="project 2">
+              </th>
+            </tr class="duan-border">
+            <tr class="duan-border">
+              <td colspan="2">
+                <h5><a href="./digital-cv.html">CV CÁ NHÂN</a></h5>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div class="row">
+                  <div class="col">
+                    <p style="font-style: italic;"><span
+                      style="margin-top: 20px; padding: 5px; color: white; border-radius: 30%; background-color: #22b8cf">
+                      2021 </span> </p>
+
+                  </div>
+                  <div class="col">
+                    <i class="icon-user-1"></i><span>FUNIX</span><br>
+                    <i class="icon-lamp"></i><span>DEVELOPPER</span> 
+
+                  </div>
+                </div>  
+              </td>
+            </tr>
+            <tr class="duan-border">
+              <td>Mô tả</td>
+              <td>Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như kỹ năng nghề nghiệp</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Nhiệm vụ</td>
+              <td>- Phát triển code- Review code -
+                Tối ưu code
+                - Xử lý lỗi</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Công nghệ</td>
+              <td>- HTML, CSS</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="col-sm pb-3">
+          <table class="duan-border">
+            <tr class="duan-border">
+              <th colspan="2" class="duan-image">
+                <img class="duan-image" src="./img/project_2.png" alt="project 2">
+              </th>
+            </tr class="duan-border">
+            <tr class="duan-border">
+              <td colspan="2">
+                <h5><a href="./digital-cv.html">TRANG WEB QUẢN LÝ THÚ CƯNG</a> </h5>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div class="row">
+                  <div class="col">
+                    <p style="font-style: italic;"><span
+                      style="margin-top: 20px; padding: 5px; color: white; border-radius: 30%; background-color: #22b8cf">
+                      2021 </span> </p>
+
+                  </div>
+                  <div class="col">
+                    <i class="icon-user-1"></i><span>FUNIX</span><br>
+                    <i class="icon-lamp"></i><span>DEVELOPPER</span> 
+
+                  </div>
+                </div>              
+
+              </td>
+            </tr>
+            <tr class="duan-border">
+              <td>Mô tả</td>
+              <td>Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như kỹ năng nghề nghiệp</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Nhiệm vụ</td>
+              <td>- Phát triển code- Review code -
+                Tối ưu code
+                - Xử lý lỗi</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Công nghệ</td>
+              <td>- HTML, CSS</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="col-sm pb-3">
+          <table class="duan-border">
+            <tr class="duan-border">
+              <th colspan="2" class="duan-image">
+                <img class="duan-image" src="./img/project_3.png" alt="project 2">
+              </th>
+            </tr class="duan-border">
+            <tr class="duan-border">
+              <td colspan="2">
+                <h5><a href="./digital-cv.html">TRANG WEB XEM TIN TỨC</a> </h5>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div class="row">
+                  <div class="col">
+                    <p style="font-style: italic;"><span
+                      style="margin-top: 20px; padding: 5px; color: white; border-radius: 30%; background-color: #22b8cf">
+                      2021 </span> </p>
+
+                  </div>
+                  <div class="col">
+                    <i class="icon-user-1"></i><span>FUNIX</span><br>
+                    <i class="icon-lamp"></i><span>DEVELOPPER</span> 
+
+                  </div>
+                </div>  
+              </td>
+            </tr>
+            <tr class="duan-border">
+              <td>Mô tả</td>
+              <td>Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như kỹ năng nghề nghiệp</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Nhiệm vụ</td>
+              <td>- Phát triển code- Review code -
+                Tối ưu code
+                - Xử lý lỗi</td>
+            </tr>
+            <tr class="duan-border">
+              <td>Công nghệ</td>
+              <td>- HTML, CSS</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+      
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container-fliud footer">
+      <div class="icon d-flex justify-content-center align-items-center p-5">
+        <i class="icon-facebook-circled"></i>
+        <div>Facebook </div>
+        
+        <i class="icon-linkedin-circled"></i>
+        <div>Linkedin</div> 
+        <i class="icon-github-circled"></i>
+        <div>Github</div> 
+        
       </div>
 
-      <!--Footer-->
-      <footer class="container d-flex mt-5">
-        <p style="width: 80%">2017-2021 Company, Inc <a href="#">Privacy</a> <a href="#">Terms</a></p>
-        <p style="width: 20%" class="d-flex justify-content-end"><a href="#top">Back to top</a></p>
-      </footer>
+    </div>
+
+  </footer>
 </body>
+
 </html>
